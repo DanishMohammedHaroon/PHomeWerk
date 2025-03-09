@@ -1,13 +1,17 @@
 # Project Title
-PHomeWerk (P for Physio, Home because it will be done at home or in a personal environment and Werk... because work is more fun and do-able when it does not sound like work!)
+PHomeWerk (P for Physio, Home because it will be done at home or in a personal environment and Werk... because work is more fun and do-able when it does not sound like work!)... I will refer it to as PHW.
 
 ## Overview
 
-What is your app? Give a brief description in a couple of sentences.
+Life is a loop, a routine, its dynamic is a sort of way where it takes feedback and adjust so we can maintain a certain format of living.
+User Side: (a.k.a. the Physiotherapists)
+PHW is about providing access to better feedback and patient care for the Physiotherapists. They can assign exercises to clients, set repspetitions and difficulty level of exercise.
+Client Side: (a.k.a. the Patient)  
+On the patient side it is to provide: accountability, tracking, remote access to exercises and a way to immediately notify their Physiotherapists if an exercise is not working for them, enabling the Physiotherapist to adjust the workout/regime according to the feedback... which can be dome after an in person visit, or even remotely.
 
 ### Problem Space
 
-Why is your app needed? Give any background information around any pain points or other reasons.
+1. When covid hit we all lost acces to life's necessities, access to healthcare was one of them, in our community of St. John's, NL we have the bulk of our population either in the working age (15 - 65) with heavier emphasis on the later years, and we have a higher than average elderly population. For them (15- 65 age demographic) to be working optimally access to physical health and wellbeing is necessary and 
 
 ### User Profile
 
