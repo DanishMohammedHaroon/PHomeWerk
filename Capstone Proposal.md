@@ -78,18 +78,67 @@ Experience simplicity and elegance in design. Our platform is built to be access
 
 ### Tech Stack
 
-Libraries I intend to use:
-1. sass: for css and scss styling,
-2. axios 
-3. cors 
-4. react-router-dom 
-5. dotenv 
-6.react query 
-7.--save react-modal
+**Libraries I intend to use:**
+
+1. React.js: 
+Used to build a responsive, dynamic, and intuitive front-end interface.
+
+2. Node.js with Express: 
+Powers the backend APIs to handle requests and manage server-side logic seamlessly.
+
+3. Sass:
+Used for advanced CSS and SCSS styling, allowing you to write modular, reusable, and maintainable styles.
+
+4. Axios:
+Simplifies API calls by handling HTTP requests and responses between the front-end and back-end effortlessly.
+
+5. Cors:
+Ensures secure cross-origin resource sharing, allowing your API to communicate safely with the front-end.
+
+6. React Router DOM:
+Enables seamless navigation and dynamic routing in your React application for a smooth user experience.
+
+6. dotenv:
+Manages environment variables securely, keeping sensitive data like API keys and configuration settings out of your codebase.
+
+7. React Query:
+Handles asynchronous data fetching and caching, making server state management more efficient and responsive.
+
+8. React Modal:
+Provides accessible modal dialogs for pop-up interactions, enhancing the user interface without compromising on usability.
+
+**Libraries that I might use but i am still researching:**
+
+1. React Toastify:
+For non-intrusive notifications and alerts that inform users about updates, successes, or errors in real time.
+
+2. Formik and Yup:
+For robust form handling and validation, ensuring data integrity and improving user input experiences.
+
+3. Redux (or Zustand):
+For managing global state, particularly useful if your application scales and state management becomes more complex.
+
+4. Jest:
+For unit testing, helping you ensure that your components and functions perform as expected.
+
+5. Tailwind CSS:
+A utility-first CSS framework that allows you to rapidly build custom designs directly in your markup. It can be easily integrated with React and Sass for more control over your styling.
 
 ### APIs
 
-List any external sources of data that will be used in your app.
+I intend on making my own server to host most of the data and validation. I havent found any physiotherapy API's but there are some interesting options that I might use and repurpose: 
+
+1. API Ninjas Exercises API:
+This API provides access to thousands of exercises, including details like muscle groups, equipment, and difficulty levels. It’s free up to a certain number of requests, this can be a good kickoff, but the limit is the drawback.
+
+2. ExerciseDB API on RapidAPI:
+With a collection of over 1,300 exercises, this API categorizes exercises by body part, equipment, and type. It’s available with a free tier, which gives me more information but is still limited by tier costs.
+
+3. Free Exercise DB on GitHub:
+Although not a traditional API, this open-source JSON dataset contains data on 800+ exercises. this is really interesting as it can serve as my dataset. 
+
+4. Auto-generate exercises on CHAT-GPT and other AI respurces, leverage them to create data for my Database. This I would use if I do not have enough data needed for my specific purpose. When implemented in real life this database can be populated
+by actual data from Physiotherapists using the app during beta-testing phase (and even after if it makes it tot  the market).
 
 ### Sitemap
 
