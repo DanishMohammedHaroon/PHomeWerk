@@ -29,17 +29,63 @@ Patients (Client Side):
 
 Who They Are: Individuals ranging from working-age adults to seniors who rely on physiotherapy to manage pain, recover from injuries, or maintain overall physical health.
 How They Use PHW: They use the app to access prescribed exercises, track their progress, receive timely reminders, and quickly communicate any issues with their exercises to their physiotherapist.
-Special Considerations: The interface must be user-friendly and accessible, catering to varying levels of tech-savviness while ensuring the security and privacy of their health information.
+Special Considerations: The interface must be user-friendly and accessible, enabling seamless communication for the not so tech savvy. 
 
 ### Features
+This might sound more like an advert. but here it is....
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+**Physiotherapists (User Side):**
+
+1. Exercise Assignment:
+Empower your practice with the ability to effortlessly assign personalized exercise routines. Tailor every session by setting the perfect number of repetitions and difficulty levels to match each client’s unique needs.
+User Story: “As a physiotherapist, I want to assign custom exercises so that my patients receive the exact care they deserve.”
+
+2. Progress Tracking & Feedback:
+Stay in tune with your clients’ progress! Our app lets you see not only whether a routine was completed, but also gathers valuable insights on any parts that felt challenging. This means you can fine-tune every detail of your treatment plan.
+User Story: “As a physiotherapist, I want to receive clear feedback on exercise completion so I can adjust and perfect my treatment plans.”
+
+3. Remote Communication for Updates:
+Communicate seamlessly without interrupting your patients' daily lives. With an easy-to-use system, send updates and improvements directly, ensuring your advice reaches them promptly and effectively.
+User Story: “As a physiotherapist, I want to update my patients remotely so that I can help them improve their routines effortlessly.”
+
+**Patients (Client Side):**
+
+1. Accountability:
+Stay on track and feel supported every step of the way. The app is designed to keep you engaged and committed to your exercise routine, ensuring you never miss a beat in your journey to better health.
+User Story: “As a patient, I want consistent reminders and check-ins so that I remain dedicated to my recovery.”
+
+2. Tracking Progress:
+Celebrate your wins! Easily log your exercise routines and watch your progress unfold through clear, visual metrics that keep you motivated and inspired.
+User Story: “As a patient, I want to track my progress so that I can see the improvements and feel proud of my hard work.”
+
+3. Immediate Feedback:
+Provide instant updates on how you’re feeling about your exercises. This quick and direct feedback ensures that no detail is missed, allowing your physiotherapist to make timely adjustments to your routine.
+User Story: “As a patient, I want to give immediate feedback so that any issues are addressed right away, keeping my recovery on track.”
+
+**All Users:**
+
+1. Secure Communication:
+Enjoy peace of mind with with a better way of communicating discreet problems than voicing them out verbally.
+
+2. Anytime, Anywhere Exercising and Reporting:
+Whether you’re at home, at work, or on the go, our app is there for you. It lets you exercise and report progress from any location, making your health journey as flexible as your lifestyle.
+
+3. Extremely User-Friendly Interface:
+Experience simplicity and elegance in design. Our platform is built to be accessible and intuitive for everyone, regardless of their comfort level with technology, ensuring a smooth and enjoyable user experience for all.
+
 
 ## Implementation
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+Libraries I intend to use:
+1. sass: for css and scss styling,
+2. axios 
+3. cors 
+4. react-router-dom 
+5. dotenv 
+6.react query 
+7.--save react-modal
 
 ### APIs
 
