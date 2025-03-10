@@ -469,9 +469,91 @@ Example Response:
 
 ## Roadmap
 
-Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation working back from the capstone due date. 
+**Sprint Timeline (March 11 – March 23)**
 
----
+_Day 1 – March 11: Base Installation of Features_
+Backend Setup:
+Initialize backend project (e.g., Node.js with Express)
+Install core dependencies (dotenv, cors, JWT libraries, etc.)
+Frontend Setup:
+Create a React application
+Install essential libraries (Sass, Axios, React Router, React Query, React Modal)
+Version Control:
+Set up repository and commit initial base structure
+
+_Day 2 – March 12: Mock Page for Front Ends_
+Wireframes & Layout:
+Develop a basic mock page for key screens (landing page, login, and dashboard placeholders)
+Static Implementation:
+Build simple static versions of these pages to establish overall UI flow
+
+_Day 3 – March 13: User Authentication & Profile Endpoints_
+Backend:
+Implement user registration and login endpoints using JWT
+Frontend:
+Build authentication forms and connect them to the API
+
+_Day 4 – March 14: Exercise Catalog Endpoints_
+Backend:
+Develop endpoints for fetching exercise data (GET /api/exercises, GET /api/exercises/:id)
+Integrate with an external exercise data API or load sample data
+Documentation:
+Document parameters and expected responses
+
+_Day 5 – March 15: Exercise Catalog UI Development_
+Frontend:
+Create a responsive page for browsing the exercise catalog with filtering options
+
+_Day 6 – March 16: Assignment Management Features_
+Backend:
+Build endpoints for creating, updating, and retrieving exercise assignments (POST, GET, PUT /api/assignments)
+Frontend:
+Develop forms for physiotherapists to assign exercises and display assignment lists on the dashboard
+
+_Day 7 – March 17: Feedback Submission Module_
+Backend:
+Implement endpoints for patients to submit feedback (POST /api/feedback)
+Frontend:
+Create UI components that allow feedback submission on assignments
+
+_Day 8 – March 18: Progress Tracking Features_
+Backend:
+Develop endpoints for logging and retrieving progress data (GET and POST /api/progress)
+Frontend:
+Build components or widgets to display patient progress (charts, logs, etc.)
+
+_Day 9 – March 19: Secure Messaging & Communication_
+Backend:
+Create endpoints for secure messaging between physiotherapists and patients (GET and POST /api/messages)
+Frontend:
+Develop a messaging interface for real-time communication
+
+_Day 10 – March 20: Integration & Testing_
+Integration:
+Connect frontend and backend components
+Testing:
+Perform end-to-end testing of user flows and API endpoints
+Documentation:
+Update API documentation with any changes
+
+_Day 11 – March 21: Debugging & UI/UX Refinements_
+Bug Fixes:
+Address issues discovered during integration testing
+UI Polish:
+Refine the interface and ensure a consistent, responsive user experience
+
+_Day 12 – March 22: Final Documentation & Demo Preparation_
+Documentation:
+Complete user guides, technical documentation, and API reference materials
+Demo Preparation:
+Prepare the presentation/demo and finalize loose ends
+
+_Day 13 – March 23: Capstone Submission_
+Final Review:
+Conduct a final quality check of the entire application
+Submission:
+Package and submit the capstone project
+
 
 ## Future Implementations 
 
