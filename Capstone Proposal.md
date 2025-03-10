@@ -3,19 +3,31 @@ PHomeWerk (P for Physio, Home because it will be done at home or in a personal e
 
 ## Overview
 
-Life is a loop, a routine, its dynamic is a sort of way where it takes feedback and adjust so we can maintain a certain format of living.
-User Side: (a.k.a. the Physiotherapists)
-PHW is about providing access to better feedback and patient care for the Physiotherapists. They can assign exercises to clients, set repspetitions and difficulty level of exercise.
-Client Side: (a.k.a. the Patient)  
-On the patient side it is to provide: accountability, tracking, remote access to exercises and a way to immediately notify their Physiotherapists if an exercise is not working for them, enabling the Physiotherapist to adjust the workout/regime according to the feedback... which can be dome after an in person visit, or even remotely.
+Life is a loop—a routine that constantly takes feedback and adjusts, allowing us to maintain a balanced way of living. PHomeWerk (PHW) harnesses this concept to revolutionize physiotherapy by bridging the gap between in-person and remote care.
+
+User Side (Physiotherapists):
+PHW is all about providing physiotherapists with better feedback and enhanced patient care. With our platform, they can effortlessly assign exercises to clients, set specific repetitions and difficulty levels, and monitor progress in real time. This seamless integration means that even after an in-person visit, adjustments to a workout or treatment regime can be made remotely, ensuring that every patient receives tailored care.
+
+Client Side (Patients):
+For patients, PHW offers accountability, tracking, and remote access to exercises, ensuring they never feel disconnected from their treatment. The app allows patients to immediately notify their physiotherapists if an exercise isn’t working for them, creating an immediate feedback loop that optimizes recovery. Whether it's tracking progress or receiving timely reminders, PHW keeps patients engaged and supports a continuous cycle of improvement. It is also a method of holding the patients accountable to do the exercises and improve self discipline which is always necessary when it comes improving the quality of life.
 
 ### Problem Space
 
-1. When covid hit we all lost acces to life's necessities, access to healthcare was one of them, in our community of St. John's, NL we have the bulk of our population either in the working age (15 - 65) with heavier emphasis on the later years, and we have a higher than average elderly population. For them (15- 65 age demographic) to be working optimally access to physical health and wellbeing is necessary and 
+When covid hit we all lost access to life's necessities, access to healthcare was one of them, in our community of St. John's, NL we have the bulk of our population either in the working age (15 - 65) with heavier emphasis on the later years, and we have a higher than average elderly population (_see_ the _statistics link_). For them (15- 65 age demographic) to be working optimally access to physical health and wellbeing is necessary and, especially in health care, access to physiotherapy is a must. A lot of businesses went from brick and mortar to e-commerce and Doctors's went from seeing in-patients to booking calls over the phone and video calling. In all of this some fields were missed out and general workers, from fishermen to health care workers to athletes to physical labourers... all lost access to what supports them when their jobs have wear and tear on their bodies. This app is to start a process of healing that deficiency, its geared towards a simple interface, which is easy to use and allows remote interaction between the Phyhsiotherapist and the patient build that feedback loop into the circle of care.
+
+_statistics link_:https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&SearchText=st%2E%20john%27s&GENDERlist=1,2,3&STATISTIClist=1&DGUIDlist=2021A00051001519&HEADERlist=0
 
 ### User Profile
 
-Who will use your app? How will they use it? Add any special considerations that your app must take into account.
+Physiotherapists (User Side):
+Who They Are: Licensed professionals who traditionally provide in-person physiotherapy and are now adapting to remote care.
+How They Use PHW: They use the app to assign personalized exercise routines, adjust treatment plans in real time based on patient feedback, and monitor patient progress remotely.
+Special Considerations: The platform must integrate seamlessly into their workflow, offering easy-to-use tools that enhance, rather than complicate, their treatment processes.
+Patients (Client Side):
+
+Who They Are: Individuals ranging from working-age adults to seniors who rely on physiotherapy to manage pain, recover from injuries, or maintain overall physical health.
+How They Use PHW: They use the app to access prescribed exercises, track their progress, receive timely reminders, and quickly communicate any issues with their exercises to their physiotherapist.
+Special Considerations: The interface must be user-friendly and accessible, catering to varying levels of tech-savviness while ensuring the security and privacy of their health information.
 
 ### Features
 
