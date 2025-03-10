@@ -1,4 +1,5 @@
 # Project Title
+
 PHomeWerk (P for Physio, Home because it will be done at home or in a personal environment and Werk... because work is more fun and do-able when it does not sound like work!)... I will refer it to as PHW.
 
 ## Overview
@@ -92,7 +93,7 @@ Used for advanced CSS and SCSS styling, allowing you to write modular, reusable,
 4. Axios:
 Simplifies API calls by handling HTTP requests and responses between the front-end and back-end effortlessly.
 
-5. Cors:
+5. CORS:
 Ensures secure cross-origin resource sharing, allowing your API to communicate safely with the front-end.
 
 6. React Router DOM:
@@ -107,7 +108,7 @@ Handles asynchronous data fetching and caching, making server state management m
 8. React Modal:
 Provides accessible modal dialogs for pop-up interactions, enhancing the user interface without compromising on usability.
 
-**Libraries that I might use but i am still researching:**
+**Libraries that I might use but I am still researching:**
 
 1. React Toastify:
 For non-intrusive notifications and alerts that inform users about updates, successes, or errors in real time.
@@ -115,7 +116,7 @@ For non-intrusive notifications and alerts that inform users about updates, succ
 2. Formik and Yup:
 For robust form handling and validation, ensuring data integrity and improving user input experiences.
 
-3. Redux (or Zustand):
+3. Redux or Zustand or use contextHook(in react itself)
 For managing global state, particularly useful if your application scales and state management becomes more complex.
 
 4. Jest:
@@ -123,6 +124,8 @@ For unit testing, helping you ensure that your components and functions perform 
 
 5. Tailwind CSS:
 A utility-first CSS framework that allows you to rapidly build custom designs directly in your markup. It can be easily integrated with React and Sass for more control over your styling.
+
+6. Material UI
 
 ### APIs
 
@@ -142,11 +145,55 @@ by actual data from Physiotherapists using the app during beta-testing phase (an
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+***Sitemap Outline***
+
+**Home Page**
+
+Overview & Introduction:
+A landing page 
+
+Login:
+For existing users (physiotherapists and patients) to securely access their dashboards.
+
+Sign Up / Registration:
+New users can register by choosing their role (physiotherapist or patient).
+Dashboard
+
+Physiotherapist Dashboard:
+Profile & Settings: Manage personal details and account settings.
+Exercise Catalog: Browse available exercises with filtering options.
+Assignment Management: Create, update, and view exercise assignments for patients.
+Patient Progress: Monitor progress logs submitted by patients.
+Secure Messaging: Communicate with patients through a secure channel.
+
+
+Patient Dashboard:
+Profile & Settings: Manage personal details and health information.
+My Exercises: View and track assigned exercise routines with detailed instructions.
+Feedback Submission: Provide immediate feedback on completed routines.
+Progress Tracking: Log and view progress over time through charts and logs.
+Secure Messaging: Send and receive messages from their physiotherapist.
+Additional Pages
+
+Exercise Detail Page:
+A detailed view for each exercise, including images, instructions, difficulty level, and targeted muscle groups.
+Feedback History:
+A page to review past feedback and track changes to exercise routines over time.
+Admin/Support (Optional):
+For managing users, system settings, and support resources if needed.
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
+Here is just a rough mockup of what im expecting it to look like, now mind, these were made before the sitemap was layed out and planned so thye might not have all the features mentioned on the sitemap.
+
+_See_ attached picutres in images folder
+![Logo Design: logo selection](<Images/Logo Design.png>)
+![Login page selection](<Images/Login Page.gif>)
+![Cute 404 not found page](<Images/404 Not Found Page.png>)
+![Physiotherapists' Page](<Images/Physiotherapist Page.png>)
+![Patients' Page](<Images/Patient page.gif>)
+![Patient feedback page](<Images/Couldn't Complete.png>)
+
 
 ### Data
 
@@ -312,10 +359,112 @@ Example Response:
 4. DELETE /api/assignments/:id
 Deletes an assignment.
 Example Response:
-
 {
   "status": "success",
   "message": "Assignment deleted successfully."
+}
+
+**Feedback Submission**
+1. POST /api/feedback
+Allows patients to submit feedback on an assignment.
+Parameters (JSON):
+{
+  "assignmentId": "assign789",
+  "patientId": "user456",
+  "status": "completed",  // could also be "incomplete" or "modified"
+  "comments": "Felt too challenging at the end of the set."
+}
+
+Example Response:
+{
+  "status": "success",
+  "feedback": {
+    "id": "feedback101",
+    "assignmentId": "assign789",
+    "patientId": "user456",
+    "status": "completed",
+    "comments": "Felt too challenging at the end of the set.",
+    "timestamp": "2025-03-16T08:30:00Z"
+  }
+}
+
+**Progress Tracking**
+1. GET /api/progress
+Retrieves progress logs for a patient, optionally filtered by date.
+Query Parameters (optional):
+
+patientId
+startDate
+endDate
+Example Request:
+/api/progress?patientId=user456&startDate=2025-03-01&endDate=2025-03-31
+
+Example Response:
+[
+  {
+    "id": "progress201",
+    "patientId": "user456",
+    "logDate": "2025-03-16",
+    "performanceData": "Completed 3 sets with increased endurance."
+  }
+]
+
+2. POST /api/progress
+Allows patients to submit a new progress log.
+Parameters (JSON):
+{
+  "patientId": "user456",
+  "logDate": "2025-03-16",
+  "performanceData": "Completed 3 sets; noted improvement in endurance."
+}
+
+Example Response:
+{
+  "status": "success",
+  "progress": {
+    "id": "progress201",
+    "patientId": "user456",
+    "logDate": "2025-03-16",
+    "performanceData": "Completed 3 sets; noted improvement in endurance."
+  }
+}
+
+**Secure Communication (Messaging)**
+1. GET /api/messages
+Retrieves a list of secure messages between a physiotherapist and a patient.
+Query Parameters (optional):
+
+userId (either physiotherapist or patient)
+Example Response:
+[
+  {
+    "id": "msg301",
+    "from": "user123",
+    "to": "user456",
+    "message": "Remember to focus on your form during the curls.",
+    "timestamp": "2025-03-15T11:00:00Z"
+  }
+]
+
+2. POST /api/messages
+Sends a secure message between users.
+Parameters (JSON):
+{
+  "from": "user123",
+  "to": "user456",
+  "message": "Great job on your session today! Keep up the progress."
+}
+
+Example Response:
+{
+  "status": "success",
+  "message": {
+    "id": "msg302",
+    "from": "user123",
+    "to": "user456",
+    "message": "Great job on your session today! Keep up the progress.",
+    "timestamp": "2025-03-16T09:15:00Z"
+  }
 }
 
 ## Roadmap
