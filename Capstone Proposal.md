@@ -20,9 +20,11 @@ _statistics link_:https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof
 ### User Profile
 
 Physiotherapists (User Side):
-Who They Are: Licensed professionals who traditionally provide in-person physiotherapy and are now adapting to remote care.
-How They Use PHW: They use the app to assign personalized exercise routines, adjust treatment plans in real time based on patient feedback, and monitor patient progress remotely.
+
+Licensed professionals who traditionally provide in-person physiotherapy and are now or more likey will be adapting to remote care with the implementation of PHW.
+How will they utilize PHW: They use the app to assign personalized exercise routines, adjust treatment plans in real time based on patient feedback, and monitor patient progress remotely.
 Special Considerations: The platform must integrate seamlessly into their workflow, offering easy-to-use tools that enhance, rather than complicate, their treatment processes.
+
 Patients (Client Side):
 
 Who They Are: Individuals ranging from working-age adults to seniors who rely on physiotherapy to manage pain, recover from injuries, or maintain overall physical health.
