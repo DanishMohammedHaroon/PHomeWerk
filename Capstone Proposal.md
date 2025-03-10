@@ -162,6 +162,13 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 
 ---
 
-## Future Implementations
-Your project will be marked based on what you committed to in the above document. Here, you can list any additional features you may complete after the MVP of your application is built, or if you have extra time before the Capstone due date.
+## Future Implementations 
 
+My nice-to-haves list includes:
+
+1. Video implementation: showing exactly how the exercises are done;
+2. AI exercise generation: the AI will generate videos of exersises based on the minimal descriptions given from the physio therapist, this video if approved will be named as saved to the database for reuse.
+3. Image identification of which part of the body hurts: basically a an anatomy image map that lets the patient click the exact area where they felt pain during the exercise, giving the physiotherapist a better idea of how to modify the exercises.
+4. Assigning patient requisitons for test to be done via the app, that the patient can download and get the work done.
+5. Better data encryption to keep confidential data saf.
+6. Drag and drop option for the physiotherapist to manipulate videos and exercise images to create an intercative workout with visuals.
