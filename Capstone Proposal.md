@@ -150,11 +150,173 @@ Provide visuals of your app's screens. You can use pictures of hand-drawn sketch
 
 ### Data
 
-Describe your data and the relationships between the data points. You can show this visually using diagrams, or write it out. 
+The core of PHW’s data revolves around users, exercises, assignments, and the feedback and progress that ties everything together. Here’s a breakdown of the main entities and how they interconnect:
+
+Users:
+
+Physiotherapists: These users create and manage exercise assignments. They have personal details (name, credentials, contact info) and are linked to the patients they treat.
+Patients: These users receive exercise assignments and provide feedback. Their profiles store personal information, health metrics, and a log of progress over time.
+Exercises:
+This is the exercise catalog that includes data such as the exercise name, type, targeted muscle group(s), difficulty level, instructions, and multimedia (images, GIFs, videos). This data can be sourced from external APIs (like the Exercises API or ExerciseDB) or an internal database.
+
+Exercise Assignments:
+An assignment is a record that links a physiotherapist, a patient, and a specific exercise. It includes parameters like:
+
+Repetitions, sets, and difficulty levels
+Assigned date and time
+Special instructions or modifications
+Feedback:
+After completing an assignment, patients can provide immediate feedback. This might include:
+
+Whether they completed the exercise
+How challenging a particular exercise was
+Any issues or modifications needed
+This feedback helps physiotherapists adjust future assignments.
+Progress Logs:
+As patients continue with their routines, their performance and progress data (e.g., completion rates, improvements in difficulty handling, overall adherence) are logged over time. This historical data allows physiotherapists to monitor trends and adjust treatment plans accordingly.
+
+Secure Communication:
+Messaging or notification data might also be stored to ensure timely communication between physiotherapists and patients. This ensures that updates or modifications can be seamlessly integrated into the workflow.
 
 ### Endpoints
 
-List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+**User Authentication & Profile**
+
+1. POST /api/auth/register
+Registers a new user (physiotherapist or patient).
+Parameters (JSON):
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "role": "physiotherapist"  // or "patient"
+}
+
+
+Example Response:
+{
+  "status": "success",
+  "message": "User registered successfully.",
+  "user": {
+    "id": "user123",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "role": "physiotherapist"
+  }
+}
+
+2. POST /api/auth/login
+Authenticates a user and returns a JWT token.
+Parameters (JSON):
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+
+Example Response:
+{
+  "status": "success",
+  "token": "eyJhbGciOiJIUzI1NiIsInR..."
+}
+
+3. GET /api/users/:id
+Retrieves profile details for a user.
+Example Response:
+{
+  "id": "user123",
+  "name": "John Doe",
+  "email": "john@example.com",
+  "role": "physiotherapist"
+}
+
+**Exercise Assignments**
+
+1. POST /api/assignments
+Creates a new exercise assignment by a physiotherapist for a patient.
+Parameters (JSON):
+{
+  "physiotherapistId": "user123",
+  "patientId": "user456",
+  "exerciseId": "ex123",
+  "repetitions": 15,
+  "sets": 3,
+  "difficulty": "beginner",
+  "assignedDate": "2025-03-15T10:00:00Z",
+  "instructions": "Perform slowly and report any discomfort."
+}
+
+Example Response:
+{
+  "status": "success",
+  "assignment": {
+    "id": "assign789",
+    "physiotherapistId": "user123",
+    "patientId": "user456",
+    "exerciseId": "ex123",
+    "repetitions": 15,
+    "sets": 3,
+    "difficulty": "beginner",
+    "assignedDate": "2025-03-15T10:00:00Z",
+    "instructions": "Perform slowly and report any discomfort."
+  }
+}
+
+2. GET /api/assignments
+Lists all assignments. Can be filtered by user ID (physiotherapist or patient).
+Query Parameters (optional):
+
+physiotherapistId
+patientId
+Example Request:
+/api/assignments?patientId=user456
+Example Response:
+[
+  {
+    "id": "assign789",
+    "physiotherapistId": "user123",
+    "patientId": "user456",
+    "exerciseId": "ex123",
+    "repetitions": 15,
+    "sets": 3,
+    "difficulty": "beginner",
+    "assignedDate": "2025-03-15T10:00:00Z",
+    "instructions": "Perform slowly and report any discomfort."
+  }
+]
+
+3. PUT /api/assignments/:id
+Updates an existing assignment (e.g., to adjust exercise parameters based on feedback).
+Parameters (JSON):
+{
+  "repetitions": 20,
+  "sets": 3,
+  "instructions": "Increase pace slightly; monitor form."
+}
+
+Example Response:
+{
+  "status": "success",
+  "assignment": {
+    "id": "assign789",
+    "physiotherapistId": "user123",
+    "patientId": "user456",
+    "exerciseId": "ex123",
+    "repetitions": 20,
+    "sets": 3,
+    "difficulty": "beginner",
+    "assignedDate": "2025-03-15T10:00:00Z",
+    "instructions": "Increase pace slightly; monitor form."
+  }
+}
+4. DELETE /api/assignments/:id
+Deletes an assignment.
+Example Response:
+
+{
+  "status": "success",
+  "message": "Assignment deleted successfully."
+}
 
 ## Roadmap
 
