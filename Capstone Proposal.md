@@ -94,13 +94,13 @@ Used for advanced CSS and SCSS styling, allowing you to write modular, reusable,
 Simplifies API calls by handling HTTP requests and responses between the front-end and back-end effortlessly.
 
 5. CORS:
-Ensures secure cross-origin resource sharing, allowing your API to communicate safely with the front-end.
+Ensures secure cross-origin resource sharing, allowing the selected API to communicate safely with the front-end.
 
 6. React Router DOM:
-Enables seamless navigation and dynamic routing in your React application for a smooth user experience.
+Enables seamless navigation and dynamic routing in the React application for a smooth user experience.
 
 6. dotenv:
-Manages environment variables securely, keeping sensitive data like API keys and configuration settings out of your codebase.
+Manages environment variables securely, keeping sensitive data like API keys and configuration settings out of the codebase.
 
 7. React Query:
 Handles asynchronous data fetching and caching, making server state management more efficient and responsive.
@@ -117,15 +117,16 @@ For non-intrusive notifications and alerts that inform users about updates, succ
 For robust form handling and validation, ensuring data integrity and improving user input experiences.
 
 3. Redux or Zustand or use contextHook(in react itself)
-For managing global state, particularly useful if your application scales and state management becomes more complex.
+For managing global state, particularly useful if the application scales and state management becomes more complex.
 
 4. Jest:
-For unit testing, helping you ensure that your components and functions perform as expected.
+For unit testing, helping you ensure that the components and functions perform as expected.
 
 5. Tailwind CSS:
-A utility-first CSS framework that allows you to rapidly build custom designs directly in your markup. It can be easily integrated with React and Sass for more control over your styling.
+A utility-first CSS framework that allows you to rapidly build custom designs directly in the markup. It can be easily integrated with React and Sass for more control over styling.
 
-6. Material UI
+6. Material UI:
+A popular React UI framework that implements Google's Material Design principles to streamline the development process and ensure a consistent, modern look across the app without having to write all the CSS from scratch.
 
 ### APIs
 
